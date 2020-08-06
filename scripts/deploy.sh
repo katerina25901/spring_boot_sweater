@@ -4,13 +4,13 @@ mvn clean package
 
 echo 'Copy files...'
 
-scp -i ~/.ssh/spring_mvc.pem \
+scp -i ~/.ssh/unicorn.pem \
     target/sweater-1.0-SNAPSHOT.jar \
-    ubuntu@18.158.156.116:/home/ubuntu/unicorn
+    ubuntu@18.158.238.136:/home/ubuntu/
 
 echo 'Restart server...'
 
-ssh -i ~/.ssh/id_rsa_drucoder ubuntu@18.158.156.116 << EOF
+ssh -i ~/.ssh/unicorn.pem -tt ubuntu@18.158.238.136 << EOF
 
 pgrep java | xargs kill -9
 nohup java -jar sweater-1.0-SNAPSHOT.jar > log.txt &

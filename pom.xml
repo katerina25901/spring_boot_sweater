@@ -75,6 +75,7 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-jdbc</artifactId>
         </dependency>
+
         <!-- JAXB -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
