@@ -13,9 +13,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
+<!--           переменная user определяется в security.ftl и существует только для авторизованных пользоваталей -->
+<!--(но вообще и для пытающихся зарегистрироваться тоже)-->
+            <#if user??>
             <li class="nav-item">
                 <a class="nav-link" href="/main">Messages</a>
             </li>
+<!--            это ссылка на списос сообщений пользователя-->
+            <li class="nav-item">
+                <a class="nav-link" href="/user-messages/${currentUserId}">My messages</a>
+            </li>
+        </#if>
             <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/user">User list</a>
