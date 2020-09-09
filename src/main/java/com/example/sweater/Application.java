@@ -11,7 +11,6 @@ public class Application {
 
     public static void main(String[] args) {
 //        String res = Stream.of("online,Jedi,Master".split(",")).map(s -> s + "_").collect(Collectors.joining(","));
-//        System.out.println(res);
         SpringApplication.run(Application.class, args);
     }
 
